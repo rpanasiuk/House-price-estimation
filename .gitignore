@@ -1,0 +1,7 @@
+readme.txt
+node_modules/
+temp.py
+temp.jsx
+server/__pycache__/
+server/controllers/__pycache__/
+dist/*.hot-update.json
