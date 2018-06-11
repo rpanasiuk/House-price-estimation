@@ -6,3 +6,4 @@ In this project I am learning how to implement React/Redux in web developing. Th
 	  - Implemented a redux-form.
 	  - API is working - respond gives 5 kNN records.
 	  - Added a leaflot map.
+	  
