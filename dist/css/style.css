@@ -1,7 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 body {
   background: rgba(0, 0, 0, 0.4); }
 
 .component {
+  display: inline-block;
   background: #fff;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 3px; }
+
+.main-form {
+  padding: 20px;
+  width: 63%; }
+
+.main-map {
+  height: 550px;
+  width: 84%;
+  padding: 20px; }
+
+.panel-list {
+  list-style: none; }
+
+.panel-list-item {
+  display: inline-block;
+  padding: 30px;
+  background: white;
+  color: white;
+  margin: 20px; }
+  .panel-list-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black; }
+
+.grid {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 600px; }
+  .grid .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 50%; }
+  .grid .col-1 {
+    width: 50%; }
+  .grid .col-2 {
+    width: 50%; }
+    .grid .col-2 .row {
+      height: 100%; }
