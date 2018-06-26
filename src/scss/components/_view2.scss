@@ -1,0 +1,200 @@
+.grid {
+	display: flex;
+	width: 100%;
+	min-height: 600px;
+
+	.row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50%;
+	}
+
+	.col-1 {
+		// background: yellow;
+		width: 50%;
+		
+	}
+
+	.col-2 {
+		// background: blue;
+		width: 50%;
+
+
+		.row {
+			height: 100%;
+		}		
+	}
+}
+
+// @media (min-width: 601px) and (max-width: 900px) {
+
+// 	.grid {
+// 		display: flex;
+// 		flex-direction: column;
+// 		width: 100%;
+// 		min-width: 600px;
+
+// 		.row {
+// 			justify-content: center;
+// 			align-items: center;
+// 			display: inline-flex;
+// 			height: 100%;
+// 			width: 50%;
+// 		}
+
+// 		.col-1 {
+// 			width: 100%;
+// 			height: 50%;
+// 			display: block;
+// 			flex: 1;
+
+// 		}
+
+// 		.col-2 {
+// 			width: 100%;
+// 			height: 50%;
+// 			display: block;
+// 			flex: 1;
+
+// 			.row {
+// 				width: 100%;
+// 			}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 600px) {
+
+// 	.grid {
+// 		flex-direction: column;
+// 		width: 100%;
+// 		min-height: 600px;
+
+// 		.row {
+// 			display: block;
+// 			width: 100%
+// 		}
+
+// 		.col-1 {
+// 			width: 100%;
+// 		}
+
+// 		.col-2 {
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .grid {
+// 	display: flex;
+// 	width: 100%;
+// 	min-height: 600px;
+// 	padding: 20px;
+
+// 	.row {
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		height: 50%;
+
+
+// 		* {
+// 			width: 100%;
+// 			height: 100%;
+// 			background: red;
+// 		}
+// 	}
+
+// 	.col-1 {
+// 		background: yellow;
+// 		width: 50%;
+		
+// 	}
+
+// 	.col-2 {
+// 		background: blue;
+// 		width: 50%;
+
+
+// 		.row {
+// 			height: 100%;
+// 		}		
+// 	}
+// }
+
+// @media (min-width: 601px) and (max-width: 900px) {
+
+// 	.grid {
+// 		display: flex;
+// 		flex: 1;
+// 		flex-direction: column;
+// 		width: 100%;
+// 		min-height: 600px;
+
+// 		.row {
+// 			justify-content: center;
+// 			align-items: center;
+// 			display: inline-flex;
+// 			height: 100%;
+// 			width: 50%;
+
+// 			* {
+// 				width: 100%;
+// 				height: 100%;
+// 				background: red;
+// 			}
+// 		}
+
+// 		.col-1 {
+// 			width: 100%;
+// 			height: 50%;
+// 			display: block;
+// 		}
+
+// 		.col-2 {
+// 			width: 100%;
+// 			height: 50%;
+// 			display: block;
+
+// 			.row {
+// 				height: 100%;
+// 			}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 600px) {
+
+// 	.grid {
+// 		flex-direction: column;
+// 		width: 100%;
+// 		min-height: 600px;
+
+// 		.row {
+// 			display: block;
+// 			width: 100%
+// 		}
+
+// 		.col-1 {
+// 			width: 100%;
+// 		}
+
+// 		.col-2 {
+// 			width: 100%;
+// 		}
+// 	}
+// }

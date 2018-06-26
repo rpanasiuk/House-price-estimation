@@ -1,0 +1,17 @@
+.panel-list {
+	list-style: none;
+}
+
+.panel-list-item {
+	display: inline-block;
+	padding: 30px;
+	background: white;
+	color: white;
+	margin: 20px;
+
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: black;
+	}
+}

@@ -3,6 +3,15 @@
 	background: $color-white;
 	box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
 	border-radius: 3px;
-	padding: 30px;
-	margin: 30px;
+}
+
+.main-form {
+	padding: 20px;
+	width: 63%;
+}
+
+.main-map {
+	height: 550px;
+	width: 84%;
+	padding: 20px;
 }
