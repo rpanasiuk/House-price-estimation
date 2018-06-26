@@ -2,9 +2,6 @@ import pandas as pd
 import os
 
 from .model import knn_regressor
-
-# SERVER_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# print(SERVER_PATH)
 from utils import save_model
 
 def main():

@@ -4,14 +4,7 @@ import sys
 
 from flask import request
 
-# SERVER_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# print(sys.path)
-# sys.path[0] = SERVER_PATH
-# print(sys.path)
-from utils import load_model
-# sys.path.insert(0, ".")
-# print(os.path.abspath(__file__))
-# from os.path.join(SERVER_PATH, 'utils.py') import load_model
+from utils import load_model, get_knn_records, get_data
 
 pd.set_option('display.max_columns', 500)
 
@@ -26,7 +19,8 @@ def predict():
 		raise e
 
 	if test.empty:
-		return(bad_request())
+		# return(bad_request())
+		pass
 	else:
 		# LOAD A MODEL
 		model = load_model('data/knn_regressor.pkl')
@@ -36,7 +30,7 @@ def predict():
 		print(prediction)
 
 		# Get kneighbors ids
-		ids = get_knn_records(model, test)
+		ids = get_knn_records(model, test, 5)
 
 		# Get kNN records
 		data = get_data(df, ids)
@@ -46,18 +40,3 @@ def predict():
 		print(response)
 
 		return response
-
-def get_knn_records(model, test):
-
-    X = load_model('data/knn_training_set.pkl')
-
-    knn = model.kneighbors(test)
-
-    results = []
-    for i in knn[1][0]:
-        results.append(X.iloc[[i]].index[0])
-
-    return results
-
-def get_data(data, ls):
-    return data[data['id'].isin(ls)].reset_index(drop=True)
