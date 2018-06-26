@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 
-import { fetchNearestNeighbours } from '../actions/index.jsx';
-	
+import { fetchNearestNeighbours } from '../actions/action_fnn.jsx';
+import { setHouseData } from '../actions/action_house-data.jsx';
+
 class FetchData extends Component {
 
 	renderField = (field) => {
@@ -23,6 +24,7 @@ class FetchData extends Component {
 
 	onSubmit = (object) => {
 		this.props.fetchNearestNeighbours(object);
+		this.props.setHouseData(object);
 	}
 
 	render(){
@@ -82,9 +84,12 @@ class FetchData extends Component {
 	}        
 }
 
+
+
+
 export default reduxForm({
 	// validate,
 	form: 'FetchDataForm'
 })(
-	connect(null, { fetchNearestNeighbours })(FetchData)
+	connect(null, { fetchNearestNeighbours, setHouseData })(FetchData)
 )

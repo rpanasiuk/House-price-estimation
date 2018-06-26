@@ -1,8 +1,8 @@
-import { FETCH_NN } from '../actions/action_fnn.jsx';
+import { FETCH_DISTRICT } from '../actions/action_district.jsx';
 
 export default function(state=[], action) {
 	switch (action.type) {
-		case FETCH_NN:
+		case FETCH_DISTRICT:
 			return action.payload.data;
 	}
 	return state;

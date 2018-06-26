@@ -3,16 +3,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import ReduxPromise from 'redux-promise';
-// import { reducer as form } from "redux-form";
+import thunk from 'redux-thunk';
 
 import App from './components/app.jsx';
 import reducers from './reducers/index.jsx';
 
 require("../scss/main.scss");
 
-// const reducer = combineReducers({reducers, routing: routerReducer, form})
-
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+export const createStoreWithMiddleware = applyMiddleware(ReduxPromise, thunk)(createStore);
 
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
