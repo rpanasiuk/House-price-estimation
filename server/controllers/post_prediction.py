@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import sys
+import json
 
 from flask import request
 
@@ -34,9 +35,12 @@ def predict():
 
 		# Get kNN records
 		data = get_data(df, ids)
-		print(data)
 
-		response = data.to_json(orient="records")
+		response = {}
+		response['houses'] = data.to_dict(orient="records")
+		response['prediction'] = prediction[0]
+
+		response = json.dumps(response)
 		print(response)
-
+		
 		return response
