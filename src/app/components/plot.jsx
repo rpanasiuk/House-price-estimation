@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Bar } from 'react-chartjs-2';
 
+Chart.defaults.global.defaultFontStyle = 'bold';
+Chart.defaults.global.defaultFontSize = 14;
+
 const data = {
     datasets: [
     {
-        label: 'Sales',
+        label: 'Median price',
         type:'line',
         fill: false,
         borderColor: '#EC932F',
@@ -17,7 +20,7 @@ const data = {
     },
     {
         type: 'bar',
-        label: 'Visitor',
+        label: 'Houses distribution',
         fill: false,
         backgroundColor: '#71B37C',
         borderColor: '#71B37C',
@@ -58,7 +61,10 @@ const options = {
                     display: false
                 },
                 labels: {
-                    show: true
+                    show: true,                    
+                },
+                ticks: {
+                    maxTicksLimit: 7                    
                 }
             },
             {
@@ -71,9 +77,24 @@ const options = {
                 },
                 labels: {
                     show: true
+                },
+                ticks: {
+                    beginAtZero: true,
+                    maxTicksLimit: 7
                 }
             }
-        ]
+        ]        
+    },
+    layout: {
+        padding: {
+        left: 20,
+        right: 20
+        }
+    },
+    title: {
+        display: true,
+        text: 'Living SQFT. boundaries with median price',
+        fontSize: 18
     }
 };
 

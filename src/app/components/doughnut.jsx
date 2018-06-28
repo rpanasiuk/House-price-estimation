@@ -39,10 +39,28 @@ export default class DoughnutComponent extends Component {
 				]
 			}]
 		};
+
+		const options = {
+			responsive: true,
+			legend: {
+				position: 'right'
+			},
+			layout: {
+				padding: {
+				left: 20,
+				right: 20
+				}
+			},
+			title: {
+				display: true,
+				text: 'Distribution in relation to the built year',
+        		fontSize: 18
+			}
+		}
 		
 	    return (
 			<div className="component">
-				<Doughnut data={data} options={{ responsive: true }} />
+				<Doughnut data={data} options={options} />
 			</div>
 	    );  		
   	} else {
