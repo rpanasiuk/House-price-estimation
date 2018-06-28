@@ -1,13 +1,12 @@
 .component {
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: $color-white;
 	box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
 	border-radius: 3px;
-}
-
-.main-form {
-	padding: 20px;
-	width: 63%;
+	width: 90%;
+	height: 90%;
 }
 
 .main-map {

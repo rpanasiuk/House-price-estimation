@@ -4,6 +4,16 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 56.25%;
+}
+
 body {
 	background: rgba($color-black, 0.4);
+}
+
+@media (max-width: 1240px) {
+	html {
+		font-size: 50%;
+	}
 }
