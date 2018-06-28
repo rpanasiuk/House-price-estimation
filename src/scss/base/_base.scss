@@ -5,15 +5,34 @@
 }
 
 html {
-	font-size: 56.25%;
+	font-size: 25%;
 }
 
 body {
+	font-family: 'Source Sans Pro', sans-serif;
 	background: rgba($color-black, 0.4);
 }
 
-@media (max-width: 1240px) {
+@media (min-width: 960px) {
+	html {
+		font-size: 31.25%;
+	}
+}
+
+@media (min-width: 1140px) {
+	html {
+		font-size: 37.5%;
+	}
+}
+
+@media (min-width: 1460px) {
 	html {
 		font-size: 50%;
+	}
+}
+
+@media (min-width: 1840px) {
+	html {
+		font-size: 62.5%;
 	}
 }

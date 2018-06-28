@@ -2,11 +2,13 @@
 
 @import 'base/base';
 
-@import 'components/component';
-@import 'components/panel';
 @import 'components/button';
 @import 'components/form';
-@import 'components/predictor';
 @import 'components/introduction';
-@import 'components/view2';
-@import 'components/view-main';
+@import 'components/predictor';
+
+@import 'layout/component';
+@import 'layout/panel';
+@import 'layout/view';
+
+@import 'pages/view-main';
