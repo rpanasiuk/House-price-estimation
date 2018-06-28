@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Form from "../components/form.jsx";
 import MapComponent from "../components/map.jsx";
 import Predictor from "../components/predictor.jsx";
+import IntroductionComponent from "../components/introduction.jsx";
 
 class mainView extends Component {
 	renderPredictionComponent() {
@@ -15,6 +16,12 @@ class mainView extends Component {
 					<Predictor prediction={prediction} data={houseData} />
 				</div>
 			);
+		} else {
+			return (
+				<div className="row">
+					<IntroductionComponent />
+				</div>
+			);			
 		}
 	}
 
@@ -32,11 +39,11 @@ class mainView extends Component {
 		return (
 			<div className="container">				
 				<div className="col">
+					{this.renderPredictionComponent()}
+
 					<div className="row">
 						<Form />
 					</div>
-					
-					{this.renderPredictionComponent()}						
 				</div>
 				<div className="col">
 					<div className="row">
