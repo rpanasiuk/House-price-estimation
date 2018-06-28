@@ -36,7 +36,7 @@ export default class MapComponent extends Component {
 
         return (
             <section className="main-map component">
-                <Map center={center} zoom={this.state.zoom} style={{height: '500px', width: '500px'}}>
+                <Map center={center} zoom={this.state.zoom} style={{height: '100%', width: '100%'}}>
                     <TileLayer
                     attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

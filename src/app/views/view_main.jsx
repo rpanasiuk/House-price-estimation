@@ -3,20 +3,44 @@ import { connect } from 'react-redux';
 
 import Form from "../components/form.jsx";
 import MapComponent from "../components/map.jsx";
+import Predictor from "../components/predictor.jsx";
 
 class mainView extends Component {
+	renderPredictionComponent() {
+		const { markers: { prediction }, houseData } = this.props;
+
+		if (prediction && houseData) {
+			return (
+				<div className="row">
+					<Predictor prediction={prediction} data={houseData} />
+				</div>
+			);
+		}
+	}
+
+	mapComponentData() {
+		const { markers } = this.props;
+
+		if (markers.houses) {
+			return Object.values(markers.houses);
+		} else {
+			return markers;
+		}		
+	}
+
 	render() {
-		console.log('markers', this.props.markers);
 		return (
-			<div className="grid">
-				<div className="col-2">
+			<div className="container">				
+				<div className="col">
 					<div className="row">
 						<Form />
 					</div>
+					
+					{this.renderPredictionComponent()}						
 				</div>
-				<div className="col-2">
+				<div className="col">
 					<div className="row">
-						<MapComponent markers={this.props.markers} />
+						<MapComponent markers={this.mapComponentData()} />
 					</div>
 				</div>
 			</div>
@@ -24,8 +48,8 @@ class mainView extends Component {
 	}
 }
 
-function mapStateToProps({ markers }) {
-  return { markers };
+function mapStateToProps({ markers, houseData }) {
+  return { markers, houseData };
 }
 
 export default connect(mapStateToProps)(mainView);

@@ -42,7 +42,7 @@ export default class DoughnutComponent extends Component {
 		
 	    return (
 			<div className="component">
-				<Doughnut data={data} width={500} height={500} />
+				<Doughnut data={data} options={{ responsive: true }} />
 			</div>
 	    );  		
   	} else {

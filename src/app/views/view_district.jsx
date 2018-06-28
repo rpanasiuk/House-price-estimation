@@ -2,7 +2,7 @@ import React, { Component, StrictMode } from 'react';
 import { connect } from 'react-redux';
 
 import Placeholder from '../components/placeholder.jsx';
-import PlotComponent from '../components/plotly-char.jsx';
+import PlotComponent from '../components/plot.jsx';
 import DoughnutComponent from "../components/doughnut.jsx";
 import MapComponent from '../components/map.jsx';
 
@@ -26,21 +26,20 @@ class districtView extends Component {
 
 	render() {
 		return (
-			<div>
-				<div className="grid">
-					<div className="col-1">
-						<div className="row">
-							<PlotComponent data={this.props.districtData} />
-						</div>
-
-						<div className="row">
-							<DoughnutComponent data={this.props.districtData} />
-						</div>
+			<div className="container">
+				<div className="col">
+					<div className="row">
+						<PlotComponent data={this.props.districtData} />
 					</div>
-					<div className="col-2">
-						<div className="row">
-							<MapComponent markers={this.mapComponentData()} />
-						</div>
+
+					<div className="row">
+						<DoughnutComponent data={this.props.districtData} />
+					</div>
+				</div>
+
+				<div className="col">
+					<div className="row">
+						<MapComponent markers={this.mapComponentData()} />
 					</div>
 				</div>
 			</div>

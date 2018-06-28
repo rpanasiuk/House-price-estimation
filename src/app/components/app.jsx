@@ -28,7 +28,7 @@ export default class App extends Component {
     render() {
         return (
             <HashRouter>
-                <div>
+                <div className="view">
                     <Panel />
                     <Switch>
                         {routes.map((route, index) => (

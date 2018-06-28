@@ -11,6 +11,7 @@ class FetchData extends Component {
 		return (
 			<div className="form__row">
 				<label htmlFor={field.name} className="visuallyhidden">{field.label}</label>
+				<div className="form__row-title">{field.label}</div>
 				<input
 					className="text"
 					type="text"
@@ -28,57 +29,57 @@ class FetchData extends Component {
 	}
 
 	render(){
-		return (
+		return (					
 			<section className="main-form component">
-				<div className="container">
-					<form className="form" id="mainForm" method="POST" 
-						onSubmit={this.props.handleSubmit(this.onSubmit)}>
+				<form className="form" id="mainForm" method="POST" 
+					onSubmit={this.props.handleSubmit(this.onSubmit)}>
 
-						<Field
-							label="Number of bedrooms"
-							name="bedrooms"
-							placeholder="1"
-							component={this.renderField}
-						/>
+					<Field
+						label="Number of bedrooms"
+						name="bedrooms"
+						placeholder="1"
+						component={this.renderField}
+					/>
 
-						<Field
-							label="Number of bathrooms"
-							name="bathrooms"
-							placeholder="1.0"
-							component={this.renderField}
-						/>
+					<Field
+						label="Number of bathrooms"
+						name="bathrooms"
+						placeholder="1.0"
+						component={this.renderField}
+					/>
 
-						<Field
-							label="SQFT living"
-							name="sqftLiving"
-							placeholder="500"
-							component={this.renderField}
-						/>
+					<Field
+						label="Living square feets"
+						name="sqftLiving"
+						placeholder="500"
+						component={this.renderField}
+					/>
 
-						<Field
-							label="SQFT lot"
-							name="sqftLot"
-							placeholder="1000"
-							component={this.renderField}
-						/>
+					<Field
+						label="Residential lot size"
+						name="sqftLot"
+						placeholder="1000"
+						component={this.renderField}
+					/>
 
-						<Field
-							label="Year built"
-							name="yrBuilt"
-							placeholder="1950"
-							component={this.renderField}
-						/>
+					<Field
+						label="Year built"
+						name="yrBuilt"
+						placeholder="1950"
+						component={this.renderField}
+					/>
 
-						<Field
-							label="Zipcode"
-							name="zipcode"
-							placeholder="98178"
-							component={this.renderField}
-						/>
+					<Field
+						label="Zipcode"
+						name="zipcode"
+						placeholder="98178"
+						component={this.renderField}
+					/>
 
-						<button className="btn btn--submit">SEND</button>           
-					</form>
-				</div>
+					<div className="form__btn">
+						<button className="btn btn--submit btn--form">SEND</button>           
+					</div>
+				</form>
 			</section>
 		);
 	}        
