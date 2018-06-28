@@ -2,7 +2,7 @@ import React, { Component, StrictMode } from 'react';
 
 import Placeholder from '../components/placeholder.jsx';
 
-export default class secondaryView extends Component {
+export default class PlaceholderView extends Component {
 	render() {
 		return (
 			<div className="container">

@@ -1,33 +1,33 @@
 import React, { Component } from "react";
-import { HashRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Panel from "./panel.jsx";
 
-import mainView from "../views/view_main.jsx";
-import secondaryView from "../views/view_secondary.jsx";
-import districtView from "../views/view_district.jsx";
+import MainView from "../views/view_main.jsx";
+import PlaceholderView from "../views/view_placeholder.jsx";
+import DistrictView from "../views/view_district.jsx";
 
 
 const routes = [
     {
         path: "/",
-        view: mainView,
+        view: MainView,
         exact: true
     },
     {
-        path: "/view1",
-        view: secondaryView
+        path: "/placeholder",
+        view: PlaceholderView
     },
     {
-        path: "/view2",
-        view: districtView
+        path: "/district",
+        view: DistrictView
     }
 ];
 
 export default class App extends Component {
     render() {
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <div className="view">
                     <Panel />
                     <Switch>
@@ -41,7 +41,7 @@ export default class App extends Component {
                         ))}  
                     </Switch>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         )    
     }
 }

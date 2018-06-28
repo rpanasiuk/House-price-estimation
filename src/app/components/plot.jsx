@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Bar } from 'react-chartjs-2';
 
+import innerHeightPadding from '../utils/window-height.jsx';
+
 Chart.defaults.global.defaultFontStyle = 'bold';
-Chart.defaults.global.defaultFontSize = 14;
+Chart.defaults.global.defaultFontSize = 12;
 
 const data = {
     datasets: [
@@ -10,22 +12,22 @@ const data = {
         label: 'Median price',
         type:'line',
         fill: false,
-        borderColor: '#EC932F',
-        backgroundColor: '#EC932F',
-        pointBorderColor: '#EC932F',
-        pointBackgroundColor: '#EC932F',
-        pointHoverBackgroundColor: '#EC932F',
-        pointHoverBorderColor: '#EC932F',
+        borderColor: '#6baed6',
+        backgroundColor: '#6baed6',
+        pointBorderColor: '#6baed6',
+        pointBackgroundColor: '#6baed6',
+        pointHoverBackgroundColor: '#6baed6',
+        pointHoverBorderColor: '#6baed6',
         yAxisID: 'y-axis-2'
     },
     {
         type: 'bar',
         label: 'Houses distribution',
         fill: false,
-        backgroundColor: '#71B37C',
-        borderColor: '#71B37C',
-        hoverBackgroundColor: '#71B37C',
-        hoverBorderColor: '#71B37C',
+        backgroundColor: '#08306b',
+        borderColor: '#08306b',
+        hoverBackgroundColor: '#6baed6',
+        hoverBorderColor: '#6baed6',
         yAxisID: 'y-axis-1'
     }]
 };
@@ -87,15 +89,23 @@ const options = {
     },
     layout: {
         padding: {
-        left: 20,
-        right: 20
+            left: 20,
+            right: 20,
+            top: innerHeightPadding(10),
+            bottom: innerHeightPadding(10)
         }
     },
     title: {
         display: true,
         text: 'Living SQFT. boundaries with median price',
-        fontSize: 18
-    }
+        fontSize: 16
+    },
+    legend: {
+        labels: {
+            boxWidth: 15,
+            fontSize: 10
+        }
+    }    
 };
 
 
@@ -122,19 +132,19 @@ export default class PlotComponent extends Component {
             options.scales.xAxes[0].labels = xAxis;
 
             return (
-                <div className="component">
+                <section className="district-plot component">
                     <Bar
                         data={data}
                         options={options}
                     />
-                </div>
+                </section>
             );
         } else {
 
             return (      
-                <div className="component">
+                <section className="loader component">
                     Plot loading..
-                </div>
+                </section>
             );
         }
     }

@@ -55,8 +55,15 @@ A few of the features:
 
 <div>
 	<img src="https://cdn4.iconfinder.com/data/icons/proglyphs-computers-and-development/512/iMac-512.png" alt="Layout desktop" style="display: inline-block;" height="100" />
-
 </div>
+
+[Mobile Layout { Main View } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/main_1855x965.png)
+[Mobile Layout { Estimated house price view } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/pred_1855x965.png)
+[Mobile Layout { Stats View } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/district_1855x965.png)
+<br>
+[Mobile Layout { Main View } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/main_1366x768.png)
+[Mobile Layout { Estimated house price view } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/pred_1366x768.png)
+[Mobile Layout { Stats View } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/district_1366x768.png)
 
 ## ToDo List
 

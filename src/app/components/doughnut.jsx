@@ -1,9 +1,53 @@
 import React, { Component } from 'react';
-import {Doughnut} from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
+
+import innerHeightPadding from '../utils/window-height.jsx';
+
+const colors = [
+	'#deebf7',
+	'#c6dbef',
+	'#9ecae1',
+	'#6baed6',
+	'#4292c6',
+	'#2171b5',
+	'#08519c',
+	'#08306b'
+];
+
+const data = {
+	datasets: [{
+		backgroundColor: colors,
+		hoverBackgroundColor: colors
+	}]
+};
+
+const options = {
+	responsive: true,
+	legend: {
+		position: 'right',
+		labels: {
+			boxWidth: 12,
+			fontSize: 7
+		}
+	},
+	layout: {
+		padding: {
+			left: 20,
+			right: 20,
+			top: innerHeightPadding(10),
+			bottom: innerHeightPadding(10)
+		}
+	},
+	title: {
+		display: true,
+		text: 'Distribution in relation to the built year',
+		fontSize: 16
+	}
+}
 
 export default class DoughnutComponent extends Component {
+	
   render() {
-
   	const { districtYears } = this.props.data;
 
   	if (districtYears) {
@@ -13,62 +57,20 @@ export default class DoughnutComponent extends Component {
 	  		return districtYears[el][0];
 	  	});
 
-	  	const data = {
-			labels: labels,
-			datasets: [{
-				data: dataArray,
-				backgroundColor: [
-					'#FF6384',
-					'#36A2EB',
-					'#FFCE56',
-					'#FF6384',
-					'#36A2EB',
-					'#FFCE56',
-					'#FF6384',
-					'#36A2EB'								
-				],
-				hoverBackgroundColor: [
-					'#FF6384',
-					'#36A2EB',
-					'#FFCE56',
-					'#FF6384',
-					'#36A2EB',
-					'#FFCE56',
-					'#FF6384',
-					'#36A2EB'
-				]
-			}]
-		};
-
-		const options = {
-			responsive: true,
-			legend: {
-				position: 'right'
-			},
-			layout: {
-				padding: {
-				left: 20,
-				right: 20
-				}
-			},
-			title: {
-				display: true,
-				text: 'Distribution in relation to the built year',
-        		fontSize: 18
-			}
-		}
+	  	data.labels = labels;
+	  	data.datasets[0].data = dataArray;
 		
 	    return (
-			<div className="component">
+			<section className="district-doughnut component">
 				<Doughnut data={data} options={options} />
-			</div>
+			</section>
 	    );  		
   	} else {
 
 		return (      
-			<div className="component">
+			<section className="loader component">
 				Plot loading..
-			</div>
+			</section>
       );
     }
   }

@@ -8,19 +8,19 @@ class Panel extends Component {
 
     render() { 
         return (
-            <div className="container container--panel">
-                <ul className="panel-list">
-                    <li className="panel-list-item">
+            <section className="panel container">
+                <ul className="panel__list">
+                    <li className="panel__list-item">
                         <Link to="/"><img src="./img/home.png" className="panel__logo" alt="Home"/></Link>
                     </li>
-                    <li className="panel-list-item">
-                        <Link to="/view1"><img src="./img/pie_chart.png" className="panel__logo" alt="Placeholder"/></Link>
+                    <li className="panel__list-item">
+                        <Link to="/placeholder"><img src="./img/pie_chart.png" className="panel__logo" alt="Placeholder"/></Link>
                     </li>
-                    <li className="panel-list-item">
-                        <Link to="/view2"><img src="./img/bar_chart.png" className="panel__logo" alt="District"/></Link>
+                    <li className="panel__list-item">
+                        <Link to="/district"><img src="./img/bar_chart.png" className="panel__logo" alt="District"/></Link>
                     </li>
                 </ul>
-            </div>    
+            </section>    
         );
     }
 }

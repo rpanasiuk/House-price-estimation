@@ -6,7 +6,7 @@ import MapComponent from "../components/map.jsx";
 import Predictor from "../components/predictor.jsx";
 import IntroductionComponent from "../components/introduction.jsx";
 
-class mainView extends Component {
+class MainView extends Component {
 	renderPredictionComponent() {
 		const { markers: { prediction }, houseData } = this.props;
 
@@ -59,4 +59,4 @@ function mapStateToProps({ markers, houseData }) {
   return { markers, houseData };
 }
 
-export default connect(mapStateToProps)(mainView);
+export default connect(mapStateToProps)(MainView);

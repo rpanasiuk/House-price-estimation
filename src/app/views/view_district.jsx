@@ -8,7 +8,7 @@ import MapComponent from '../components/map.jsx';
 
 import { fetchDistrict } from "../actions/action_district.jsx";
 
-class districtView extends Component {
+class DistrictView extends Component {
 
 	componentDidMount() {
 		this.props.fetchDistrict(this.props.houseData)
@@ -51,4 +51,4 @@ function mapStateToProps({ houseData, districtData }) {
 	return { houseData, districtData };
 }
 
-export default connect(mapStateToProps, { fetchDistrict })(districtView)
+export default connect(mapStateToProps, { fetchDistrict })(DistrictView)
