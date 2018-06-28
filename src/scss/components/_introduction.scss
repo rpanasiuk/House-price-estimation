@@ -1,0 +1,26 @@
+.main-introduction {
+	padding: 30px;
+	font-size: 2rem;
+}
+
+.introduction {
+
+	ul {
+		list-style-position: inside;
+	}
+	
+	&__title {
+		margin-bottom: 2rem;
+		font-size: 5rem;
+	}
+
+	&__desc {
+		margin-bottom: 1rem;
+	}
+
+	&__how-to {
+		display: inline-block;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+}
