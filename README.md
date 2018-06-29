@@ -57,13 +57,17 @@ A few of the features:
 	<img src="https://cdn4.iconfinder.com/data/icons/proglyphs-computers-and-development/512/iMac-512.png" alt="Layout desktop" style="display: inline-block;" height="100" />
 </div>
 
-[Mobile Layout { Main View } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/main_1855x965.png)
-[Mobile Layout { Estimated house price view } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/pred_1855x965.png)
-[Mobile Layout { Stats View } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/district_1855x965.png)
+[Mobile Layout { Main View } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/House-price-estimation/master/src/img/main_1855x965.png)
 <br>
-[Mobile Layout { Main View } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/main_1366x768.png)
-[Mobile Layout { Estimated house price view } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/pred_1366x768.png)
-[Mobile Layout { Stats View } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/IT-Recruitment-Website/master/src/img/district_1366x768.png)
+[Mobile Layout { Estimated house price view } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/House-price-estimation/master/src/img/pred_1855x965.png)
+<br>
+[Mobile Layout { Stats View } - 1855x965px](https://raw.githubusercontent.com/rpanasiuk/House-price-estimation/master/src/img/district_1855x965.png)
+<br><br><br>
+[Mobile Layout { Main View } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/House-price-estimation/master/src/img/main_1366x768.png)
+<br>
+[Mobile Layout { Estimated house price view } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/House-price-estimation/master/src/img/pred_1366x768.png)
+<br>
+[Mobile Layout { Stats View } - 1366x768px](https://raw.githubusercontent.com/rpanasiuk/House-price-estimation/master/src/img/district_1366x768.png)
 
 ## ToDo List
 
@@ -77,3 +81,8 @@ A few of the features:
 	  - Implemented a redux-form.
 	  - API is working - respond gives 5 kNN records.
 	  - Added a leaflot map.
+  - **28/06/18**
+	  - Implemented a new view with statistics.
+	  - Cut layout and added side-bar panel.
+	  - Composed README layout.
+	  - Added a new component at main-view with estimated house value.
